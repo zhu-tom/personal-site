@@ -1,0 +1,117 @@
+body {
+    background: white;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    margin: 0;
+    padding: 10vh 0;
+    display: block;
+    overflow: auto;
+}
+
+.banner_image_box {
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 130px 65px rgba(0,0,0,1); 
+}
+
+.banner_image {
+    width: 100vw;
+    z-index: -1;
+    position: relative;
+}
+
+.banner_text {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font: 50px tahoma bold;
+}
+
+p {
+    margin: 0;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin: 0 0;
+}
+
+header {
+    background-color: rgba(0,0,0,0.75);
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    z-index: 100;
+}
+
+ul.navlinks {
+    padding-left: 0;
+    float: right;
+    font-size: 17;
+    position: relative;
+    margin-right: 10px;
+    list-style-type: none;
+
+}
+
+ul.navlinks li {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+#next {
+    position: absolute;
+    display: inline;
+    bottom: 0;
+    bottom: 10px;
+}
+
+.next-arrow {
+    height:20px;
+    width:40px;
+}
+
+.navlinks a {
+    position: static;
+    padding: 6px 12px;
+    display: block;
+    text-align: center;
+    color: lightgray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navlinks a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+a.logo {
+    position: relative;
+    float: left;
+    padding: 10px;
+    margin-left: 15px;
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 35px
+}
