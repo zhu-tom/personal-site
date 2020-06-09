@@ -9,8 +9,17 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <style>
             .jumbotron {
+                height: 50vh;
                 margin: 0;
                 background: transparent;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            #masthead {
+                height: 100vh;
             }
 
             .container {
@@ -58,6 +67,18 @@
                 animation: fadeIn 0.75s;
             }
 
+            .card {
+                transition: transform 0.25s ease-in;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+            .badge {
+                text-shadow: none;
+            }
+
             @keyframes fadeIn {
                 0% {opacity: 0;}
                 100% {opacity: 1;}
@@ -69,7 +90,7 @@
             }
 
             @keyframes slideUp {
-                0% {transform: translateY(250px);}
+                0% {transform: translateY(150px);}
                 100% {transform: translateY(0);}
             }
 
@@ -80,36 +101,41 @@
         </style>
     </head>
     <body class="bg-dark">
-        <div class="jumbotron">
-            <p class="text-center display-1">Hi, I'm Tom.</p>
+        <div class="fixed-top">
+            <button id="resume" type="button" class="btn mt-3 mr-3 float-right btn-outline-success">Resume</button>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav" id="topNav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+        <div id="masthead">
+            <div class="jumbotron d-flex align-items-center justify-content-center">
+                <p class="text-center align-middle display-1">Hi, I'm Tom.</p>
             </div>
-        </nav>
-        <div style="text-align: center;">
-            <a style="color: inherit;" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </a>
+            <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav" id="topNav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div style="text-align: center;" class="mt-5">
+                <a style="color: inherit;" href="#about" data-click="scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+            </div>
         </div>
-        <div class="row justify-content-start">
+        <div id="content" class="row justify-content-start">
             <div class="col-2">
                 <nav id="fullNav" class="navbar nav-hidden navbar-expand-lg sticky-top navbar-dark">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
@@ -135,18 +161,83 @@
             </div>
             <div id="sections" class="col-8">
                 <div id="about" class="section-hidden">
-                    <h1>About Me <small class="text-muted">Who am I?</small></h1>
+                    <h1 class="mb-4">About Me <small class="text-muted">Who am I?</small></h1>
+                    <!-- <div class="media align-items-center">
+                        <svg class="align-self-center mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36px" height="36px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>                        
+                        <div class="media-body">
+                            <p class="lead font-weight-light mb-0">Second-year Computer Science student at Carleton University</p>
+                        </div>
+                    </div>
+                    <div class="media align-items-center">
+                        <svg class="align-self-center mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36px" height="36px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>                        
+                        <div class="media-body">
+                            <p class="lead font-weight-light mb-0">Born and raised in Ottawa</p>
+                        </div>
+                    </div> -->
                     <p class="lead">
-                        My name is Tom Zhu and I'm a second-year Computer Science Student at Carleton University. I started programming in the 11th grade and haven't looked back since! I really like building my own projects from scratch and learning new technology and frameworks. My main focuses have been with web and mobile development, but 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        My name is Tom Zhu and I'm currently a second-year Computer Science Student at Carleton University. 
+                        I was born and raised in Ottawa, and I've been playing sports for as long as I can remember. 
+                        I started programming in the 11th grade and haven't looked back since. 
+                        I like building my own full-stack projects and learning new technology and frameworks. 
+                        My main focuses have been with web and mobile development. 
+                        I'm a huge fan of basketball and volleyball, and I love playing the guitar and watching movies. 
+                        Check out my work down below!
                     </p>
                     <hr class="divider divider-hidden"/>
                 </div>
                 <div id="projects" class="section-hidden">
-                    <h1>Projects <small class="text-muted">What have I made?</small></h1>
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <h1 class="mb-4">Projects <small class="text-muted">What have I made?</small></h1>
+                    <div class="card-deck">
+                        <div class="card bg-dark shadow">
+                            <a href="https://carleton-timetable-generator.herokuapp.com/" target="_blank">
+                                <img src="./resources/images/Screen Shot 2020-06-08 at 10.37.53 PM.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Carleton Timetable Generator</h5>
+                                <p class="card-text font-weight-light">This tool generates all possible timetables given course codes and optional filters such as days off and class times.</p>
+                                <div class="btn-group" role="group">
+                                    <a href="https://carleton-timetable-generator.herokuapp.com/" target="_blank" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></a>
+                                    <a href="https://github.com/zhu-tom/Course-Registration/" target="_blank" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Python, JavaScript, JQuery, HTML, CSS</small>
+                            </div>
+                        </div>
+                        <div class="card bg-dark shadow">
+                            <a href="https://fast-food-haven.herokuapp.com/" target="_blank">
+                                <img src="./resources/images/Screen Shot 2020-06-09 at 12.11.44 AM.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Fast Food Haven</h5>
+                                <p class="card-text font-weight-light">This web app scrapes coupon sites to find fast food deals. Makes it easy to search, filter, redeem, and find locations near you.</p>
+                                <p class="card-text">
+                                    <a href="https://devpost.com/software/fast-food-haven" class="badge badge-warning">Winner at cuHacking 2020</a>
+                                </p>
+                                <div class="btn-group" role="group">
+                                    <a href="https://fast-food-haven.herokuapp.com/" target="_blank" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></a>
+                                    <a href="https://github.com/zhu-tom/Fast-Food-Haven/" target="_blank" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Python, JavaScript, JQuery, HTML, CSS</small>
+                            </div>
+                        </div>
+                        <div class="card bg-dark shadow">
+                            <img src="./resources/images/Screen Shot 2020-06-09 at 2.11.30 AM.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Game of Life</h5>
+                                <p class="card-text">John Conway's "Game of Life" visualized using React.</p>
+                                <div class="btn-group" role="group">
+                                    <a href="https://zhutom.com/Game-of-Life" target="_blank" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></a>
+                                    <a href="https://github.com/zhu-tom/Game-of-Life/" target="_blank" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">JavaScript, React, HTML, CSS</small>
+                            </div>
+                        </div>
+                      </div>
                     <hr class="divider divider-hidden"/>
                 </div>
                 <div id="experience" class="section-hidden">
@@ -173,20 +264,32 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("#resume").addEventListener("click", () => {
+                window.open("./resources/images/Resume.pdf", "_blank");
+            });
+
+            for (const el of document.querySelectorAll("[data-click='scroll']")) {
+                const target = el.attributes.href.value;
+                const location = getOffsetTop(document.querySelector(target));
+                el.addEventListener("click", (e) => {
+                    window.scrollTo({
+                        top: location,
+                        behavior: "smooth",
+                    });
+                });
+            }
+
             let sections = [];
 
             let sectionsParent = document.querySelector("#sections");
-            let topOfParent = sectionsParent.offsetTop;
 
             let topNav = document.querySelector("#navbarNav");
-            let topNavLimit = topNav.offsetTop + topNav.offsetHeight + document.querySelector(".jumbotron").offsetHeight;
+            let topNavLimit = getOffsetTop(topNav) + topNav.offsetHeight;
             
             let dividerLocations = [];
             let dividers = document.querySelectorAll(".divider");
             for (const hr of dividers) {
-                console.log(hr);
-                console.log(hr.offsetTop + hr.offsetParent.offsetTop + hr.offsetParent.offsetParent.offsetTop);
-                dividerLocations.push(hr.offsetTop + hr.offsetParent.offsetTop + hr.offsetParent.offsetParent.offsetTop);
+                dividerLocations.push(getOffsetTop(hr));
             }
 
             let sideNav = document.querySelector("#sideNav");
@@ -196,7 +299,7 @@
             let navChildrenTop = document.querySelector("#topNav").children;
         
             for (const el of sectionsParent.children) {
-                sections.push(el.offsetTop + topOfParent);
+                sections.push(getOffsetTop(el));
             }
 
             let isNavShown = toggleNavVisibility(fullSideNav, window.scrollY, topNavLimit, false);
@@ -212,12 +315,21 @@
             });
         });
 
+        function getOffsetTop(element) {
+            let top = 0;
+
+            while (element) {
+                top += element.offsetTop || 0;
+                element = element.offsetParent;
+            }
+            return top;
+        }
+
         function scrollSpy(navChildrenSide, navChildrenTop, sections, sectionDivs, dividers, dividerLocations) {
             let posY = window.scrollY + window.innerHeight;
-            let wiggleRoom = window.innerHeight * 0.2;
+            let wiggleRoom = window.innerHeight * 0.125;
             sections.forEach((top, index, arr) => {
                 if (posY > top && sectionDivs[index].classList.contains("section-hidden")) {
-                    console.log('reveal');
                     sectionDivs[index].classList.remove("section-hidden");
                     sectionDivs[index].classList.add("section-shown");
                 }
@@ -234,7 +346,6 @@
 
             dividerLocations.forEach((val, index, arr) => {
                 if (posY > val && dividers[index].classList.contains("divider-hidden")) {
-                    console.log("passed");
                     dividers[index].classList.remove("divider-hidden");
                     dividers[index].classList.add("divider-expanded");
                 }
