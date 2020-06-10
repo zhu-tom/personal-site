@@ -34,13 +34,18 @@
                 animation: fadeIn 3s;
             }
 
-            .section-hidden {
+            .hidden {
                 visibility: hidden;
             }
 
             .section-shown {
                 visibility: visible;
                 animation: slideUp 1.5s forwards, fadeIn ease-in 1.5s;
+            }
+
+            .li-shown {
+                visibility: visible;
+                animation: enterRight 1.5s forwards, fadeIn ease-in 1.5s;
             }
 
             .divider {
@@ -92,6 +97,11 @@
             @keyframes slideUp {
                 0% {transform: translateY(150px);}
                 100% {transform: translateY(0);}
+            }
+
+            @keyframes enterRight {
+                0% {transform: translateX(150px);}
+                100% {transform: translateX(0);}
             }
 
             @keyframes fadeOut {
@@ -160,7 +170,7 @@
                 </nav>
             </div>
             <div id="sections" class="col-8">
-                <div id="about" class="section-hidden">
+                <div id="about" class="hidden">
                     <h1 class="mb-4">About Me <small class="text-muted">Who am I?</small></h1>
                     <!-- <div class="media align-items-center">
                         <svg class="align-self-center mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36px" height="36px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>                        
@@ -185,7 +195,7 @@
                     </p>
                     <hr class="divider divider-hidden"/>
                 </div>
-                <div id="projects" class="section-hidden">
+                <div id="projects" class="hidden">
                     <h1 class="mb-4">Projects <small class="text-muted">What have I made?</small></h1>
                     <div class="card-deck">
                         <div class="card bg-dark shadow">
@@ -240,14 +250,34 @@
                       </div>
                     <hr class="divider divider-hidden"/>
                 </div>
-                <div id="experience" class="section-hidden">
-                    <h1>Experience <small class="text-muted">What have I done?</small></h1>
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                <div id="experience" class="hidden">
+                    <h1 class="mb-4">Experience <small class="text-muted">What have I done?</small></h1>
+                    <ul class="list-unstyled">
+                        <li class="media hidden">
+                            <img src="./resources/images/hgglogo.png" height="64px" width="64px" class="mr-3 rounded-circle" alt="...">
+                            <div class="media-body">
+                            <h5 class="mt-0 mb-1">Quality Assurance Analyst <em class="small font-weight-light">Hot Glue Games</em><small class="text-right float-right text-muted">Jul 2018 - Aug 2018</small></h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </li>
+                        <li class="media hidden my-4">
+                            <img src="./resources/images/sssclogo.jpg" height="64px" width="64px" class="mr-3 rounded-circle" alt="...">
+                            <div class="media-body">
+                            <h5 class="mt-0 mb-1">Peer Mentor <em class="small font-weight-light">Science Student Success Centre</em><small class="text-right float-right text-muted">June 2020 - Present</small></h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </li>
+                        <li class="media hidden">
+                            <img src="..." class="mr-3" alt="...">
+                            <div class="media-body">
+                            <h5 class="mt-0 mb-1">List-based media object</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </li>
+                    </ul>
                     <hr class="divider divider-hidden"/>
                 </div>
-                <div id="contact" class="section-hidden">
+                <div id="contact" class="hidden">
                     <h1>Contact <small class="text-muted">Get in touch!</small></h1>
                     <p class="lead">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -268,6 +298,14 @@
                 window.open("./resources/images/Resume.pdf", "_blank");
             });
 
+            let toEnterRight = [];
+            let experienceList = document.querySelector("#experience").querySelectorAll("li");
+            for (const li of experienceList) {
+                toEnterRight.push({element: li, offsetTop: getOffsetTop(li)});
+            }
+
+            console.log(toEnterRight);
+
             for (const el of document.querySelectorAll("[data-click='scroll']")) {
                 const target = el.attributes.href.value;
                 const location = getOffsetTop(document.querySelector(target));
@@ -286,10 +324,10 @@
             let topNav = document.querySelector("#navbarNav");
             let topNavLimit = getOffsetTop(topNav) + topNav.offsetHeight;
             
-            let dividerLocations = [];
-            let dividers = document.querySelectorAll(".divider");
-            for (const hr of dividers) {
-                dividerLocations.push(getOffsetTop(hr));
+            let dividers = [];
+            let dividersQuery = document.querySelectorAll(".divider");
+            for (const hr of dividersQuery) {
+                dividers.push({element: hr, offsetTop: getOffsetTop(hr)});
             }
 
             let sideNav = document.querySelector("#sideNav");
@@ -299,11 +337,11 @@
             let navChildrenTop = document.querySelector("#topNav").children;
         
             for (const el of sectionsParent.children) {
-                sections.push(getOffsetTop(el));
+                sections.push({element: el, offsetTop: getOffsetTop(el)});
             }
 
             let isNavShown = toggleNavVisibility(fullSideNav, window.scrollY, topNavLimit, false);
-            scrollSpy(navChildrenSide, navChildrenTop, sections, sectionsParent.children, dividers, dividerLocations);
+            scrollSpy(navChildrenSide, navChildrenTop, sections, dividers, toEnterRight);
 
             fullSideNav.addEventListener("animationend", () => {
                 if (!isNavShown) fullSideNav.style.visibility = "hidden";
@@ -311,7 +349,7 @@
                         
             document.addEventListener("scroll", () => {
                 isNavShown = toggleNavVisibility(fullSideNav, window.scrollY, topNavLimit, isNavShown);
-                scrollSpy(navChildrenSide, navChildrenTop, sections, sectionsParent.children, dividers, dividerLocations);
+                scrollSpy(navChildrenSide, navChildrenTop, sections, dividers, toEnterRight);
             });
         });
 
@@ -325,16 +363,16 @@
             return top;
         }
 
-        function scrollSpy(navChildrenSide, navChildrenTop, sections, sectionDivs, dividers, dividerLocations) {
+        function scrollSpy(navChildrenSide, navChildrenTop, sections, dividers, toEnterRight) {
             let posY = window.scrollY + window.innerHeight;
             let wiggleRoom = window.innerHeight * 0.125;
-            sections.forEach((top, index, arr) => {
-                if (posY > top && sectionDivs[index].classList.contains("section-hidden")) {
-                    sectionDivs[index].classList.remove("section-hidden");
-                    sectionDivs[index].classList.add("section-shown");
+            sections.forEach((obj, index, arr) => {
+                if (posY > obj.offsetTop && obj.element.classList.contains("hidden")) {
+                    obj.element.classList.remove("hidden");
+                    obj.element.classList.add("section-shown");
                 }
 
-                if (posY > top + wiggleRoom && (!sections[index+1] || posY < sections[index+1])) {
+                if (posY > obj.offsetTop + wiggleRoom && (!sections[index+1] || posY < sections[index+1].offsetTop)) {
                     for (let i = 0; i < navChildrenTop.length; i++) {
                         navChildrenSide[i].classList.remove("active");
                         navChildrenTop[i].classList.remove("active");
@@ -344,10 +382,17 @@
                 }
             });
 
-            dividerLocations.forEach((val, index, arr) => {
-                if (posY > val && dividers[index].classList.contains("divider-hidden")) {
-                    dividers[index].classList.remove("divider-hidden");
-                    dividers[index].classList.add("divider-expanded");
+            dividers.forEach((obj, index, arr) => {
+                if (posY > obj.offsetTop && obj.element.classList.contains("divider-hidden")) {
+                    obj.element.classList.remove("divider-hidden");
+                    obj.element.classList.add("divider-expanded");
+                }
+            });
+
+            toEnterRight.forEach((obj, index, arr) => {
+                if (posY > obj.offsetTop && obj.element.classList.contains("hidden")) {
+                    obj.element.classList.remove("hidden");
+                    obj.element.classList.add("li-shown");
                 }
             });
         }
