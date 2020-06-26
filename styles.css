@@ -30,6 +30,27 @@ body {
     background: #343a40;
 }
 
+.alert {
+    visibility: hidden;
+    min-width: 300px;
+    text-align: center;
+    position: fixed; 
+    z-index: 1;
+    left: 50%; 
+    bottom: 1em;
+    margin-left: -150px;
+    text-shadow: none;
+}
+
+.alert.show {
+    visibility: visible;
+    animation: fadeIn 0.5s, slideUp 0.5s ease-out, fadeOut 0.5s 2.5s forwards;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
 .form-control {
     background: transparent;
     color: #919191;
@@ -49,7 +70,11 @@ label.focused {
 }
 
 .form-control:focus {
-    background-color: #ffffff;
+    background-color: #000000;
+    opacity: 0.7;
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 0 0 .1rem rgba(255, 255, 255, 0.25);
 }
 
 .spinner-grow {
@@ -60,6 +85,11 @@ form.loading .spinner-grow {
     display: inline-block;
 }
 
+.progress-bar {
+    width: 0;
+    transition: all 2.5s ease-out;
+}
+ 
 .hero {
     animation: fadeIn 4s ease-in-out;
     -webkit-animation: fadeIn 4s ease-in-out;
@@ -67,13 +97,44 @@ form.loading .spinner-grow {
     -o-animation: fadeIn 4s ease-in-out;
 }
 
+#contact a {
+    color: #ffffff;
+    transition: all 0.35s ease-in-out;
+}
+
+a[data-click="scroll"] {
+    transition: all 0.5s;
+}
+
+a[data-click="scroll"]:hover {
+    opacity: 0.5;
+}
+/* 
+a.mail:hover {
+    color: #ffffff !important;
+    opacity: 0.7;
+} */
+
+a.github:hover {
+    color: #000000 !important;
+}
+
+a.linkedin:hover {
+    color: #2867b2 !important;
+}
+
 .hidden {
     visibility: hidden;
+}
+
+#skills span {
+    text-align: right;
 }
 
 #sections > div {
     min-height: 90vh;
     margin-bottom: 2.5em;
+    max-height: 1000px;
 }
 
 .section-shown {
@@ -206,8 +267,8 @@ form.loading .spinner-grow {
     z-index: 10000 !important;
     transition: all 1s ease-in-out;
     display: flex;
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -220,8 +281,8 @@ form.loading .spinner-grow {
     transform: rotate(360deg);
 }
 
-.hamburger {
-    width: 20px;
+.hamburger, .hamburger::before, .hamburger::after {
+    width: 30px;
     height: 1.5px;
     background-color: #ffffff;
     display: block;
@@ -246,19 +307,14 @@ form.loading .spinner-grow {
 
 .hamburger::before, .hamburger::after {
     content: "";
-    width: 20px;
-    height: 1.5px;
-    background-color: #ffffff;
-    display: block;
-    position: absolute;
 }
 
 .hamburger::before {
-    transform: translateY(-6px);
+    transform: translateY(-9px);
 }
 
 .hamburger::after {
-    transform: translateY(6px);
+    transform: translateY(9px);
 }
 
 .nav-link::after {
