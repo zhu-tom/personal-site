@@ -31,6 +31,11 @@ body {
     background: #343a40;
 }
 
+.card-deck .card {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .alert {
     visibility: hidden;
     min-width: 300px;
@@ -136,7 +141,6 @@ a.linkedin:hover {
 #sections > div {
     min-height: 90vh;
     margin-bottom: 2.5em;
-    max-height: 1000px;
 }
 
 .section-shown {
