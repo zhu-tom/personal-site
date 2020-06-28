@@ -4,9 +4,9 @@
     background: transparent;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 #masthead {
     height: 100vh;
@@ -121,6 +121,10 @@ a.mail:hover {
     color: #ffffff !important;
     opacity: 0.7;
 } */
+
+.bg-dark {
+    background-color: #333 !important;
+}
 
 a.github:hover {
     color: #000000 !important;

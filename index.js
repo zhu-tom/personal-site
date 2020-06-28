@@ -74,6 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open("./resources/images/Resume.pdf", "_blank");
     });
 
+    $("a.nav-link").click((e) => {
+        let top = $($(e.target).attr("href")).offset().top;
+        $("html, body").animate({
+            scrollTop: top,
+        }, 1500);
+    });
+
     document.querySelectorAll("input").forEach(el => {
         el.addEventListener("keyup", ()=>{
             isFieldValid(el) ? el.classList.remove("is-invalid") : el.classList.add("is-invalid");
@@ -147,10 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const target = el.attributes.href.value;
         const location = getOffsetTop(document.querySelector(target));
         el.addEventListener("click", (e) => {
-            window.scrollTo({
-                top: location,
-                behavior: "smooth",
-            });
+            $('html, body').animate({
+                scrollTop: location,
+            }, 1500);
         });
     }
 
