@@ -29,11 +29,25 @@ body {
     color: #ffffff;
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
     background: #343a40;
+    font-family: 'Rubik', sans-serif;
 }
 
 .card-deck .card {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-deck {
+        display: block;
+    }
+    .card-text {
+        display: none;
+    }
 }
 
 .alert {
