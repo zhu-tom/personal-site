@@ -397,8 +397,36 @@ a.linkedin:hover {
     text-align: center;
 }
 
+svg.bounce {
+    animation: bounce 1.2s ease-in-out ;
+    -webkit-animation: bounce 1.2s ease-in-out ;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce { 
+    0% {-webkit-transform: translateY(0);} 
+    50% {-webkit-transform: translateY(3px);} 
+    100% {-webkit-transform: translateY(0px);} 
+ } 
+ 
+ @keyframes bounce { 
+    0% {transform: translateY(0);} 
+    50% {transform: translateY(3px);} 
+    100% {transform: translateY(0px);} 
+ }
+ 
 .preview-img {
     position: relative;
+    overflow: hidden;
+}
+
+.preview-img img {
+    transition: all 0.5s ease;
+}
+
+.preview-img:hover img {
+    transform: scale(1.2);
 }
 
 .preview-img:hover > .middle {
