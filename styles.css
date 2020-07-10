@@ -374,6 +374,15 @@ a.linkedin:hover {
     float: left;
 }
 
+#skills .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#skills > div {
+    padding: 0;
+}
+   
 .middle {
     position: absolute;
     text-align: center;
@@ -387,7 +396,7 @@ a.linkedin:hover {
     box-shadow: inset 0 0 25px rgba(0, 0, 0, 1);
 }
 
-.middle > div {
+.middle > svg {
     color: #ffffff;
     position: absolute;
     top: 50%;
