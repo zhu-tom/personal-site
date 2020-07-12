@@ -193,14 +193,15 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollSpy(navChildrenSide, navChildrenTop, sections, dividers, toEnterRight, progressBars);
     });
 
-    let lastEl = document.querySelector("#contact");
-    const height = lastEl.offsetHeight + getOffsetTop(lastEl) + parseInt(window.getComputedStyle(lastEl).marginBottom.replace('px',''));
+    setTimeout(() => {
+        $('[data-toggle="tooltip"]').tooltip();
+        let lastEl = document.querySelector("#contact");
+        const height = lastEl.offsetHeight + getOffsetTop(lastEl) + parseInt(window.getComputedStyle(lastEl).marginBottom.replace('px',''));
 
-    document.querySelectorAll("[data-type='bg']").forEach(el => {        
-        el.style.height = height + "px";
-    });
-
-    setTimeout(() => $('[data-toggle="tooltip"]').tooltip(), 0);
+        document.querySelectorAll("[data-type='bg']").forEach(el => {        
+            el.style.height = height + "px";
+        });
+    }, 0);
 });
 
 function getOffsetTop(element) {
