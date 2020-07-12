@@ -4,10 +4,6 @@
     background: transparent;
 }
 
-/* html {
-    scroll-behavior: smooth;
-} */
-
 #masthead {
     height: 100vh;
 }
@@ -30,6 +26,7 @@ body {
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
     background: #343a40;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 .card-deck .card {
@@ -129,18 +126,13 @@ a[data-click="scroll"] {
 a[data-click="scroll"]:hover {
     opacity: 0.5;
 }
-/* 
-a.mail:hover {
-    color: #ffffff !important;
-    opacity: 0.7;
-} */
 
 .bg-dark {
     background-color: #333 !important;
 }
 
 a.github:hover {
-    color: #000000 !important;
+    color: #333 !important;
 }
 
 a.linkedin:hover {
@@ -225,7 +217,7 @@ a.linkedin:hover {
 
 .sideNav-visible > li {
     position: relative;
-    left: -100px;
+    left: -120px;
 }
 
 .sideNav-visible > li:nth-child(1) {
@@ -441,6 +433,55 @@ svg.bounce {
     opacity: 0.5;
 }
 
+.stars, .twinkling, .clouds {
+	position: absolute;
+	display:block;
+    top:0; 
+    bottom:0;
+    left:0; 
+    right:0;
+}
+
+.stars {
+	z-index: 0;
+    background:#000 url('https://image.ibb.co/mjnygo/stars.png');
+    background-repeat: repeat;
+}
+
+.twinkling{
+    z-index: 1;
+	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png');
+    animation: move-twink-back 200s linear infinite;
+    background-repeat: repeat;
+}
+
+.clouds{
+	z-index: 2;
+    background:transparent url('https://image.ibb.co/bT4N7T/clouds.png');
+    animation: move-clouds-back 200s linear infinite;
+    background-repeat: repeat;
+}
+
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+
 @keyframes enterLeft {
     0% {left: -100px;}
     100% {left: 0;}
@@ -448,7 +489,7 @@ svg.bounce {
 
 @keyframes exitLeft {
     0% {transform: translateX(0);}
-    100% {transform: translateX(-100px);}
+    100% {transform: translateX(-120px);}
 }
 
 @keyframes fadeIn {
