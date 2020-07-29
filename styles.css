@@ -254,7 +254,12 @@ a.linkedin:hover {
     animation-delay: 0s, 0s;
 }
 
+.card-footer {
+    background-color: rgba(0, 0, 0, .8) !important;
+}
+
 .card {
+    background-color: rgba(0, 0, 0, .4) !important;
     transition: transform 0.25s ease-in;
     -moz-transition: transform 0.25s ease-in;
     -webkit-transition: transform 0.25s ease-in;

@@ -37,9 +37,7 @@ function toggleSidebar() {
 }
 
 const sendEmail = (name, email, subject, body) => Email.send({
-        Host: "smtp.gmail.com",
-        Username : "homepagemessenger@gmail.com",
-        Password : "@zhutomcom!",
+        SecureToken: "6abcbb81b4fc2efce7f960850664c736",
         To : 'zhutom01@gmail.com',
         From : `${name} <${email}>`,
         Subject : subject,
@@ -56,6 +54,7 @@ function showAlert(id) {
 
 function isValid(form) {
     form.querySelectorAll("input").forEach((el) => {
+        console.log(isFieldValid(el));
         if (!isFieldValid(el)) return false;
     });
     return isFieldValid(form.querySelector("textarea"));
