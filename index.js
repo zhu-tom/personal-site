@@ -37,7 +37,7 @@ function toggleSidebar() {
 }
 
 const sendEmail = (name, email, subject, body) => Email.send({
-        SecureToken: "fdc6ae80-d5bc-48af-a839-8804c0f18fdb",
+        SecureToken: "668c19b2-b171-4bcf-9e1a-98681d89e6da",
         To : 'zhutom01@gmail.com',
         From : `${name} <${email}>`,
         Subject : subject,
