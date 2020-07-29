@@ -36,13 +36,18 @@ function toggleSidebar() {
     }
 }
 
-const sendEmail = (name, email, subject, body) => Email.send({
-        SecureToken: "668c19b2-b171-4bcf-9e1a-98681d89e6da",
-        To : 'zhutom01@gmail.com',
-        From : `${name} <${email}>`,
-        Subject : subject,
-        Body : body,
-    });
+const sendEmail = (name, email, subject, body) => {
+    const template_params = {
+        "name": name,
+        "subject": subject,
+        "sender": email,
+        "message": body
+     }
+     
+     const service_id = "gmail";
+     const template_id = "contact_email";
+     return emailjs.send(service_id, template_id, template_params);
+}
 
 function showAlert(id) {
     const el = document.querySelector(`#${id}`);
@@ -54,7 +59,6 @@ function showAlert(id) {
 
 function isValid(form) {
     form.querySelectorAll("input").forEach((el) => {
-        console.log(isFieldValid(el));
         if (!isFieldValid(el)) return false;
     });
     return isFieldValid(form.querySelector("textarea"));
@@ -112,11 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             sendEmail(data.name, data.email, data.subject, data.message).then((message) => {
-                console.log(message);
                 form.classList.remove("loading");
                 target.removeAttribute("disabled");
 
-                const isSuccessful = message === "OK";
+                const isSuccessful = message.text === "OK";
                 showAlert(isSuccessful ? "ok-alert":"error-alert");
 
                 inputs.forEach((val) => {
