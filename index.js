@@ -219,7 +219,7 @@ function getOffsetTop(element) {
 function scrollSpy(navChildrenSide, navChildrenTop, sections, dividers, toEnterRight, progress) {
     let posY = window.scrollY + window.innerHeight;
     let wiggleRoom = window.innerHeight * 0.9;
-    sections.forEach((obj, index, arr) => {
+    sections.forEach((obj, index) => {
         if (posY > obj.offsetTop && obj.element.classList.contains("hidden")) {
             obj.element.classList.remove("hidden");
             obj.element.classList.add("section-shown");
@@ -235,14 +235,14 @@ function scrollSpy(navChildrenSide, navChildrenTop, sections, dividers, toEnterR
         }
     });
 
-    dividers.forEach((obj, index, arr) => {
+    dividers.forEach((obj) => {
         if (posY > obj.offsetTop && obj.element.classList.contains("divider-hidden")) {
             obj.element.classList.remove("divider-hidden");
             obj.element.classList.add("divider-expanded");
         }
     });
 
-    toEnterRight.forEach((obj, index, arr) => {
+    toEnterRight.forEach((obj) => {
         if (posY > obj.offsetTop && obj.element.classList.contains("hidden")) {
             obj.element.classList.remove("hidden");
             obj.element.classList.add("li-shown");
@@ -254,6 +254,24 @@ function scrollSpy(navChildrenSide, navChildrenTop, sections, dividers, toEnterR
             obj.element.style.width = skills[obj.element.getAttribute("data-skill")];
         }
     });
+
+    const badgesEl = document.querySelector('.badges');
+    const badges = getOffsetTop(badgesEl);
+    if (posY > badges && badgesEl.getAttribute('data-shown') === "false") {
+        badgesEl.setAttribute("data-shown", "true");
+        asyncForEach(document.querySelectorAll('.badge'), async (badge) => {
+            await new Promise(resolve => {
+                badge.style.opacity = 1;
+                setTimeout(() => resolve(), 100);
+            });
+        });
+    }
+}
+
+async function asyncForEach(arr, cb) {
+    for (let i = 0; i < arr.length; i++) {
+        await cb(arr[i], i, arr);
+    }
 }
 
 function toggleNavVisibility(nav, scrollPos, limit, prevIsNavShown) {
