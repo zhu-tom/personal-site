@@ -46,6 +46,17 @@ body {
     }
 }
 
+.badges > div {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.badge {
+    font-size: large;
+}
+
 .alert {
     visibility: hidden;
     min-width: 300px;
