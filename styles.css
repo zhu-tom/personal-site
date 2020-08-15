@@ -1,11 +1,13 @@
 .jumbotron {
-    height: 50vh;
     margin: 0;
     background: transparent;
 }
 
 #masthead {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .container {
