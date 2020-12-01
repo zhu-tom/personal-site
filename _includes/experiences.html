@@ -1,0 +1,14 @@
+{% for experience in site.data.experiences %}
+<div class="rounded-lg border shadow-lg p-4 my-4">
+    <div class="flex flex-row">
+        <img alt="logo" width="50" class="inline mr-4" src="/assets/img/{{ experience.img }}"/>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-row justify-between">
+                <h1 class="font-sans text-xl font-semibold">{{ experience.title }}</h1>
+                <p class="float-right">{{ experience.start }} - {% if experience.end %} {{ experience.end }} {% else %} Present {% endif %}</p>
+            </div>
+            <p>{{ experience.company }}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
