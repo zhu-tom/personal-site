@@ -1,13 +1,19 @@
+<h1 class="text-3xl font-black mb-4">Experience</h1>
 {% for experience in site.data.experiences %}
-<div class="rounded-lg border shadow-lg p-4 my-4">
+<div class="transform hover:-translate-x-2 duration-100 rounded-lg border shadow-lg p-4 mb-4 hover:border-indigo-300">
     <div class="flex flex-row">
-        <img alt="logo" width="50" class="inline mr-4" src="/assets/img/{{ experience.img }}"/>
+        <img alt="logo" width="50" style="height:max-content;" class="inline mr-4" src="/assets/img/{{ experience.img }}"/>
         <div class="flex flex-col w-full">
             <div class="flex flex-row justify-between">
-                <h1 class="font-sans text-xl font-semibold">{{ experience.title }}</h1>
-                <p class="float-right">{{ experience.start }} - {% if experience.end %} {{ experience.end }} {% else %} Present {% endif %}</p>
+                <h1 class="font-sans text-xl font-extrabold">{{ experience.company }}</h1>
+                <p class="float-right font-sans italic">{{ experience.start }} - {% if experience.end %} {{ experience.end }} {% else %} Present {% endif %}</p>
             </div>
-            <p>{{ experience.company }}</p>
+            <p class="font-sans font-semibold">{{ experience.title }}</p>
+            <ul class="list-disc list-inside">
+                {% for note in experience.notes %}
+                <li class="font-sans font-normal">{{ note.content }}</li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </div>

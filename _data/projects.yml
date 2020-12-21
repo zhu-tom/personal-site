@@ -1,0 +1,75 @@
+- name: Fast Food Haven
+  description: Hub to discover fast food coupons and deals, and locate the nearest restaurant to redeem!
+  url: https://fast-food-haven.herokuapp.com
+  github: https://github.com/zhu-tom/fast-food-haven
+  tools:
+    - Python
+    - Flask
+    - BeautifulSoup
+    - JavaScript
+    - JQuery
+    - Google Maps API
+    - Bootstrap
+
+- name: Timetable Generator
+  description: Quickly generate all possible timetables for a list of Carleton courses you want to take! Includes RateMyProf rating, helpful filters, and more!
+  url: https://carleton-timetable-generator.herokuapp.com
+  github: https://github.com/zhu-tom/course-registration
+  tools:
+    - Python
+    - Flask
+    - Mechanical Soup
+    - JavaScript
+    - JQuery
+    - Bootstrap
+
+- name: YouTube 2 Spotify
+  description: Migrate your music playlist on YouTube to your Spotify account in just a few clicks!
+  url: https://youtube-spotify-converter.herokuapp.com 
+  github: https://github.com/zhu-tom/youtube-to-spofity
+  tools:
+    - JavaScript
+    - Node.js
+    - Express
+    - Spotify API
+    - OAuth
+    - YouTube API
+
+- name: Viber
+  description: Speed friending native Android application that randomly matches you to someone else using video or text chat!
+  github: https://github.com/zhu-tom/viber
+  tools:
+    - Android
+    - Java
+    - WebRTC
+    - Firebase
+    - Android Studio
+
+- name: Stock Broker
+  description: Multiplayer stock market where users can buy/sell stock, deposit/withdraw cash, and define watchlists, event subscriptions, and more!
+  url: https://bank-street-bets.herokuapp.com
+  github: https://github.com/zhu-tom/bank-street-bets
+  tools:
+    - React
+    - Typescript
+    - Ant Design
+    - JavaScript
+    - Node.js
+    - Express
+    - MongoDB
+    - Chart.js
+    - D3.js
+
+- name: CUVB Club Site
+  description: Event registration system and homepage for the Carleton Volleyball Club, also used to manage and inform members! (not currently used due to COVID-19)
+  url: https://carletonvolleyball.netlify.app
+  github: https://github.com/zhu-tom/cuvb-homepage-gatsby
+  tools:
+    - React
+    - Gatsby
+    - GraphQL
+    - JavaScript
+    - Bulma
+    - Node.js
+    - Express
+    - MongoDB
