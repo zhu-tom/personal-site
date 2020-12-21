@@ -10,3 +10,15 @@ defaults:
       path: "assets/img"
     values:
       image: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.babel.js
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - tailwind.config.js
+  - netlify.toml
