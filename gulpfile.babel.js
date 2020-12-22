@@ -51,7 +51,7 @@ task("startServer", () => {
     server: {
       baseDir: SITE_ROOT,
       serveStaticOptions: {
-        extensions: ["html", "css", "js"],
+        extensions: ["html"],
       },
     },
   });
