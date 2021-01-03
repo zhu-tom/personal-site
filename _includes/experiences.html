@@ -1,19 +1,21 @@
 <h1 class="text-3xl font-black mb-4">Experience</h1>
 {% for experience in site.data.experiences %}
-<div class="transform hover:-translate-x-2 duration-100 rounded-lg border shadow-lg p-4 mb-4 hover:border-indigo-300 dark:hover:border-indigo-300 dark:border-gray-600">
-    <div class="flex flex-row">
-        <img alt="logo" width="50" class="inline mr-4 h-12" src="/assets/img/{{ experience.img }}"/>
-        <div class="flex flex-col w-full">
-            <div class="flex flex-row justify-between">
-                <h1 class="font-sans text-xl font-extrabold">{{ experience.company }}</h1>
-                <p class="float-right font-sans italic">{{ experience.start }} - {% if experience.end %} {{ experience.end }} {% else %} Present {% endif %}</p>
+<div data-aos="fade-up">
+    <div class="transform hover:-translate-x-2 duration-100 rounded-lg border shadow-lg p-4 mb-4 hover:border-indigo-300 dark:hover:border-indigo-300 dark:border-gray-600">
+        <div class="flex flex-row">
+            <img alt="logo" width="50" class="inline mr-4 h-12" src="/assets/img/{{ experience.img }}"/>
+            <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between">
+                    <h1 class="font-sans text-xl font-extrabold">{{ experience.company }}</h1>
+                    <p class="float-right font-sans italic">{{ experience.start }} - {% if experience.end %} {{ experience.end }} {% else %} Present {% endif %}</p>
+                </div>
+                <p class="font-sans font-semibold">{{ experience.title }}</p>
+                <ul class="list-disc list-inside">
+                    {% for note in experience.notes %}
+                    <li class="font-sans font-normal">{{ note.content }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <p class="font-sans font-semibold">{{ experience.title }}</p>
-            <ul class="list-disc list-inside">
-                {% for note in experience.notes %}
-                <li class="font-sans font-normal">{{ note.content }}</li>
-                {% endfor %}
-            </ul>
         </div>
     </div>
 </div>
