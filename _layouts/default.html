@@ -18,7 +18,7 @@
               {% include links.html %}
               </div>
             </div>
-            <p class="font-light pl-4">{{ site.data.about.bio }}</p>
+            <div class="font-light pl-4">{{ content }}</div>
           </div>
         </div>
         <div class="absolute min-w-full bottom-8 inset-x-0 flex justify-center">
@@ -27,7 +27,8 @@
           </svg>
         </div>
       </div>
-      {{ content }}
+      {% include experiences.html %}
+      {% include projects.html %}
       <hr class="h-4 mt-16 "/>
       <div class="mb-10 grid grid-cols-3 gap-2">
         <p>Last updated: <span class="font-mono border">{{ site.data.about.updated }}</span></p>
@@ -42,5 +43,6 @@
   <script src="assets/js/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="assets/js/particles.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 </body>
 </html>
