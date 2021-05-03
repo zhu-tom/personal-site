@@ -5,12 +5,12 @@
   notes:
     - content: Facilitated weekly tutorial section and office hours with over 60 students to assist with practice problems and comprehension of course materials and assignments. Graded bi-weekly assignments and midterms and responded to student inquiries in a timely and efficient manner to ensure relevant feedback 
 
-- title: Project Lead
+- title: Project Lead and Developer
   company: Carleton Blueprint
   img: blueprint.png
   start: Sep '20
   notes:
-    - content: Under construction
+    - content: Led a test-driven Agile team working to help a non-profit that provides interest-free loans to those in need by developing a CRM to track clients and applications. Worked as Project Lead spearheading the Agile SDLC using Jira, leading meetings, and contributing as a developer. Currently working exclusively as a developer.
 
 - title: Software Engineering Intern
   company: Harled Inc.
@@ -18,14 +18,15 @@
   start: Aug '20
   end: Nov '20
   notes:
-    - content: Under construction
+    - content: Project Lead for a team of interns developing a Flight Mapping System that helps aircraft asset managers view the estimated locations of their aircraft at any point in time, also allowing them to visually navigate through time in an intuitive interface.
 
 - title: Peer Mentor
   company: Carleton SSSC
   img: sssc.jpg
-  start: Jun '20
+  start: May '20
+  end: Apr '21
   notes:
-    - content: Under construction
+    - content: Motivated and supported students to define and achieve their goals personal, professional, and academic goals by running workshops and holding weekly 1-on-1 mentoring sessions. 
 
 - title: Quality Assurance Analyst
   company: Hot Glue Games
@@ -33,4 +34,4 @@
   start: Jul '18
   end: Aug '18
   notes:
-    - content: Under construction
+    - content: Gained experience in an Agile team writing bug reports and creating and executing test plans with the Quality Assurance team.

@@ -23,7 +23,7 @@
     - JQuery
     - Bootstrap
 
-- name: YouTube 2 Spotify
+- name: YouTube to Spotify
   description: Migrate your music playlist on YouTube to your Spotify account in just a few clicks!
   url: https://youtube-spotify-converter.herokuapp.com 
   github: https://github.com/zhu-tom/youtube-to-spofity
@@ -73,3 +73,26 @@
     - Node.js
     - Express
     - MongoDB
+
+- name: PoseFit
+  description: Mobile app that acts as a personal trainer by tracking form through algorithms applied to data gathered through the TensorFlow PoseNet model and providing instant feedback and counting repetitions.
+  github: https://github.com/zhu-tom/PoseFit
+  tools:
+    - JavaScript
+    - React Native
+    - Expo
+    - PoseNet
+    - Firebase
+    - Google Cloud
+
+- name: Automated Gym Booking
+  description: Instantly books desired gym slot when booking opens by registering a Cron job which interacts directly with the gym's API, reserving a spot regardless of demand.
+  github: https://github.com/zhu-tom/autores
+  tools:
+    - JavaScript
+    - Python
+    - React
+    - Next.js
+    - MongoDB
+    - Iron Session
+    - DigitalOcean
