@@ -1,9 +1,9 @@
-- title: Undergraduate Teaching Assistant
-  company: Carleton University
-  img: carleton.png
-  start: Sep '20
+- title: Software Developer Co-op
+  company: JSI Telecom
+  img: jsi.png
+  start: May '21
   notes:
-    - content: Facilitated weekly tutorial section and office hours with over 60 students to assist with practice problems and comprehension of course materials and assignments. Graded bi-weekly assignments and midterms and responded to student inquiries in a timely and efficient manner to ensure relevant feedback 
+    - content: Coming soon!
 
 - title: Project Lead and Developer
   company: Carleton Blueprint
@@ -11,6 +11,14 @@
   start: Sep '20
   notes:
     - content: Led a test-driven Agile team working to help a non-profit that provides interest-free loans to those in need by developing a CRM to track clients and applications. Worked as Project Lead spearheading the Agile SDLC using Jira, leading meetings, and contributing as a developer. Currently working exclusively as a developer.
+
+- title: Undergraduate Teaching Assistant
+  company: Carleton University
+  img: carleton.png
+  start: Sep '20
+  end: Apr '21
+  notes:
+    - content: Facilitated weekly tutorial section and office hours with over 60 students to assist with practice problems and comprehension of course materials and assignments. Graded bi-weekly assignments and midterms and responded to student inquiries in a timely and efficient manner to ensure relevant feedback 
 
 - title: Software Engineering Intern
   company: Harled Inc.

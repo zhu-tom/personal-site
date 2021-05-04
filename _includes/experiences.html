@@ -10,7 +10,7 @@
                     <p class="float-right font-sans italic">{{ experience.start }} - {% if experience.end %} {{ experience.end }} {% else %} Present {% endif %}</p>
                 </div>
                 <p class="mb-2 font-sans font-semibold">{{ experience.title }}</p>
-                <ul class="list-disc list-inside">
+                <ul class="list-disc list-outside ml-4">
                     {% for note in experience.notes %}
                     <li class="font-sans font-normal">{{ note.content }}</li>
                     {% endfor %}
