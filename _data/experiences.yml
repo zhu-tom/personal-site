@@ -3,14 +3,14 @@
   img: jsi.png
   start: May '21
   notes:
-    - content: Coming soon!
+    - content: In progress...
 
 - title: Project Lead and Developer
   company: Carleton Blueprint
   img: blueprint.png
   start: Sep '20
   notes:
-    - content: Led a test-driven Agile team working to help a non-profit that provides interest-free loans to those in need by developing a CRM to track clients and applications. Worked as Project Lead spearheading the Agile SDLC using Jira, leading meetings, and contributing as a developer. Currently working exclusively as a developer.
+    - content: Led a test-driven Agile team working to help a non-profit that provides interest-free loans to those in need by developing a CRM to track clients and applications. Worked as Project Lead spearheading test-driven Agile SDLC using Jira, leading meetings, and contributing as a developer using React, TypeScript, Jest, Formik, and Material UI. Currently working exclusively as a developer.
 
 - title: Undergraduate Teaching Assistant
   company: Carleton University
@@ -18,7 +18,7 @@
   start: Sep '20
   end: Apr '21
   notes:
-    - content: Facilitated weekly tutorial section and office hours with over 60 students to assist with practice problems and comprehension of course materials and assignments. Graded bi-weekly assignments and midterms and responded to student inquiries in a timely and efficient manner to ensure relevant feedback 
+    - content: Facilitated weekly tutorial section and office hours with over 60 students to assist with practice problems and comprehension of course materials and assignments. Graded bi-weekly assignments and midterms and responded to student inquiries in a timely and efficient manner to ensure relevant feedback.
 
 - title: Software Engineering Intern
   company: Harled Inc.
@@ -26,7 +26,7 @@
   start: Aug '20
   end: Nov '20
   notes:
-    - content: Project Lead for a team of interns developing a Flight Mapping System that helps aircraft asset managers view the estimated locations of their aircraft at any point in time, also allowing them to visually navigate through time in an intuitive interface.
+    - content: Developed a Flight Mapping System that helps aircraft asset managers view the estimated locations of their aircraft at any point in time, also allowing them to visually navigate through time in an intuitive interface in React and Ant Design, with backend in Express and MongoDB.
 
 - title: Peer Mentor
   company: Carleton SSSC
