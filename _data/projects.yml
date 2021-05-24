@@ -96,3 +96,15 @@
     - MongoDB
     - Iron Session
     - DigitalOcean
+
+- name: Portfolio Website
+  description: The website you're looking at right now! Built so changing and adding information only requires editing YAML files. 
+  url: https://zhutom.com
+  github: https://github.com/zhu-tom/personal-site
+  tools:
+    - Jekyll
+    - Liquid
+    - Markdown
+    - Tailwind CSS
+    - JavaScript
+    - Netlify
