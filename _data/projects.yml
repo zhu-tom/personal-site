@@ -99,8 +99,8 @@
     - Firebase
     - Google Cloud
 
-- name: Automated Gym Booking
-  description: Instantly books desired gym slot when booking opens by registering a Cron job which interacts directly with the gym's API, reserving a spot regardless of demand.
+- name: Auto Gym Booking
+  description: Instantly books desired gym slot when booking opens by registering a cron job which interacts directly with the gym's API, reserving a spot regardless of demand.
   github: https://github.com/zhu-tom/autores
   tools:
     - JavaScript
