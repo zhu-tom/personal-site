@@ -74,6 +74,20 @@
     - Express
     - MongoDB
 
+- name: Onebook
+  description: Chrome extension that acts as a single hub to manage your contacts on every platform! 
+  url: https://devpost.com/software/onebook
+  github: https://github.com/zhu-tom/Onebook
+  tools:
+    - JavaScript
+    - Node.js
+    - Express
+    - CockroachDB
+    - PostgreSQL
+    - Sequelize 
+    - Chrome API
+    - Google APIs
+
 - name: PoseFit
   description: Mobile app that acts as a personal trainer by tracking form through algorithms applied to data gathered through the TensorFlow PoseNet model and providing instant feedback and counting repetitions.
   github: https://github.com/zhu-tom/PoseFit
