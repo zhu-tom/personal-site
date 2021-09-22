@@ -140,3 +140,20 @@
     - AutoML
     - TensorFlow.js
     - Google Cloud
+
+- name: Blamechain
+  description: Sick of getting blamed in arguments when you know they're wrong? Tired of having nothing to say to "you always do this"? Wish you could prove your point with immutable, decentralized, and distributed proof? Enter Blaimchain.
+  url: https://devpost.com/software/blame-game
+  github: https://github.com/rachelwonghw/Blamechain
+  awards:
+    - Winner of Hack the North 2021
+  tools:
+    - React
+    - JavaScript
+    - Node.js
+    - Google Cloud
+    - Firebase
+    - Cloud Functions
+    - Natural Language Sentiment Analysis
+    - Speech-to-Text
+    - Blockchain
