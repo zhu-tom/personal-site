@@ -1,3 +1,36 @@
+- name: Carma
+  description: Quickly and accurately determine if you are fit to drive, creating greater transparency and less risk for insurance providers. Includes a sobriety reaction game and selfie test with image classification!
+  url: https://devpost.com/software/carma-lown32
+  github: https://github.com/michaelhtleung/sobriety-test
+  awards:
+    - Best Use of Google Cloud
+    - Intact Insurance Innovation Challenge
+  tools:
+    - React
+    - JavaScript
+    - styled-components
+    - Firebase
+    - AutoML
+    - TensorFlow.js
+    - Google Cloud
+
+- name: Blamechain
+  description: Sick of getting blamed in arguments when you know they're wrong? Tired of having nothing to say to "you always do this"? Wish you could prove your point with immutable, decentralized, and distributed proof? Enter Blaimchain.
+  url: https://devpost.com/software/blame-game
+  github: https://github.com/rachelwonghw/Blamechain
+  awards:
+    - Winner at Hack the North 2021
+  tools:
+    - React
+    - JavaScript
+    - Node.js
+    - Google Cloud
+    - Firebase
+    - Cloud Functions
+    - Natural Language Sentiment Analysis
+    - Speech-to-Text
+    - Blockchain
+    
 - name: Fast Food Haven
   description: Hub to discover fast food coupons and deals, and locate the nearest restaurant to redeem!
   url: https://fast-food-haven.herokuapp.com
@@ -124,36 +157,3 @@
     - Tailwind CSS
     - JavaScript
     - Netlify
-
-- name: Carma
-  description: Quickly and accurately determine if you are fit to drive, creating greater transparency and less risk for insurance providers. Includes a sobriety reaction game and selfie test with image classification!
-  url: https://devpost.com/software/carma-lown32
-  github: https://github.com/michaelhtleung/sobriety-test
-  awards:
-    - Best Use of Google Cloud
-    - Intact Insurance Innovation Challenge
-  tools:
-    - React
-    - JavaScript
-    - styled-components
-    - Firebase
-    - AutoML
-    - TensorFlow.js
-    - Google Cloud
-
-- name: Blamechain
-  description: Sick of getting blamed in arguments when you know they're wrong? Tired of having nothing to say to "you always do this"? Wish you could prove your point with immutable, decentralized, and distributed proof? Enter Blaimchain.
-  url: https://devpost.com/software/blame-game
-  github: https://github.com/rachelwonghw/Blamechain
-  awards:
-    - Winner at Hack the North 2021
-  tools:
-    - React
-    - JavaScript
-    - Node.js
-    - Google Cloud
-    - Firebase
-    - Cloud Functions
-    - Natural Language Sentiment Analysis
-    - Speech-to-Text
-    - Blockchain

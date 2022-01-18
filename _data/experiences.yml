@@ -2,6 +2,7 @@
   company: Shopify
   img: shopify.png
   start: Sep '21
+  end: Dec '21
   notes:
     - content: Working on Shopify Balance using React, TypeScript, GraphQL, Ruby on Rails
 
@@ -24,7 +25,6 @@
   company: Carleton University
   img: carleton.png
   start: Sep '20
-  end: Apr '21
   notes:
     - content: Facilitated weekly tutorial section and office hours with over 60 students to assist with practice problems and comprehension of course materials and assignments. Graded bi-weekly assignments and midterms and responded to student inquiries in a timely and efficient manner to ensure relevant feedback.
 
