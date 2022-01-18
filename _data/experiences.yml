@@ -18,6 +18,7 @@
   company: Carleton Blueprint
   img: blueprint.png
   start: Sep '20
+  end: Dec '21
   notes:
     - content: Led a test-driven Agile team working to help a non-profit that provides interest-free loans to those in need by developing a CRM to track clients and applications. Worked as Project Lead spearheading test-driven Agile SDLC using Jira, leading meetings, and contributing as a developer using React, TypeScript, Jest, Formik, and Material UI. Currently working exclusively as a developer.
 
