@@ -1,10 +1,18 @@
+- title: Incoming Software Engineer Intern
+  company: Coinbase
+  img: coinbase.png
+  start: May '22
+  end: Sep '22
+  notes:
+    - content: Coming soon...
+
 - title: Software Developer Intern
   company: Shopify
   img: shopify.png
   start: Sep '21
   end: Dec '21
   notes:
-    - content: Working on Shopify Balance using React, TypeScript, GraphQL, Ruby on Rails
+    - content: Member of the Shopify Balance team using React, TypeScript, GraphQL, Ruby on Rails. Headed project to implement cancellation of physical cards before activation by leveraging Stripe API to create GraphQL mutations in Ruby on Rails, decreasing related support requests by 100% and increasing merchant autonomy. Devised yearly summary using React TypeScript and GraphQL queries giving merchants insight into annual trends. Established utility in TypeScript to allow for the testing of React hooks requiring mount within the Banking context. Built internal transactions list using Rails MVC to include associated transaction and card details if applicable.
 
 - title: Software Developer Co-op
   company: JSI Telecom
