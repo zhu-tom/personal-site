@@ -23,17 +23,17 @@
             </div>
         </div>
         <div>
-            <p class="pt-2">{{ project.description }}</p>
+            <p class="pt-2 text-sm">{{ project.description }}</p>
             {% if project.awards %}
             <div class="flex flex-wrap mt-1">
                 {% for award in project.awards %}
-                    <span class="flex bg-yellow-400 bg-opacity-75 rounded-full py-1 px-2 mr-2 mt-2 text-sm text-center items-start align-middle">{{ award }}</span>
+                    <span class="text-sm flex bg-yellow-400 bg-opacity-75 rounded-full py-1 px-2 mr-2 mt-2 text-sm text-center items-start align-middle">{{ award }}</span>
                 {% endfor %}
             </div>
             {% endif %}
             <div class="flex flex-wrap mt-1">
             {% for tool in project.tools %}
-                <span class="flex bg-blue-300 bg-opacity-25 rounded-full py-1 px-2 mr-2 mt-2 text-sm text-center items-start align-middle">{{ tool }}</span>
+                <span class="text-sm flex bg-blue-300 bg-opacity-25 rounded-full py-1 px-2 mr-2 mt-2 text-sm text-center items-start align-middle">{{ tool }}</span>
             {% endfor %}
             </div>
         </div>
