@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/bootstrap.css" | relative_url }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body id="particles-js" class="bg-gradient-to-br dark:to-gray-800 dark:from-gray-900">
@@ -13,7 +14,7 @@
         <div data-aos="fade-up" data-aos-once="true" data-aos-duration="2000">
           <div class="grid grid-cols-1 md:grid-cols-2 divide-x-0 md:divide-x-4 divide-gray-600 gap-0 px-6">
             <div class="flex flex-col justify-center space-y-2 pr-4 my-4">
-              <h1 class="text-6xl font-black text-right flex items-center justify-center md:justify-end">Hi, I'm {{ site.data.about.first_name }}</h1>
+              <h1 class="text-6xl font-black text-center md:text-right flex items-center justify-center md:justify-end">Hi, I'm {{ site.data.about.first_name }}</h1>
               <div class="flex justify-center md:justify-end space-x-2">
               {% include links.html %}
               </div>
@@ -44,5 +45,9 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="assets/js/particles.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="assets/js/bootstrap.js"></script>
 </body>
 </html>

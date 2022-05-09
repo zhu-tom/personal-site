@@ -22,7 +22,7 @@
     - content: Combined test and analysis tools into cohesive Angular platform enabling long-running tests, experiments, and reporting. Formed REST API services in Spring Boot to interact with JPA repositories and configure jobs in MySQL database. Instituted multi-threaded Java job runner with Quartz cron scheduling to manage and trigger recurring jobs. Configured STOMP messaging over WebSocket protocol to relay live log output of processes to SockJS client and stop jobs mid-run.
 
 - title: VP of Engineering
-  company: Carleton Blueprint
+  company: CU Blueprint
   img: blueprint.png
   start: Sep '20
   notes:
