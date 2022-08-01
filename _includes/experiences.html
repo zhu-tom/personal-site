@@ -10,11 +10,11 @@
                     <p class="float-right font-sans italic">{{ experience.start }} - {% if experience.end %} {{ experience.end }} {% else %} Present {% endif %}</p>
                 </div>
                 <p class="mb-2 font-sans font-semibold">{{ experience.title }}</p>
-                <ul class="list-disc list-outside ml-4 collapse" id="{{ experience.company }}">
+                <div class="ml-4 collapse" id="{{ experience.company }}">
                     {% for note in experience.notes %}
-                    <li class="font-sans font-normal text-sm">{{ note.content }}</li>
+                    <div class="font-sans font-normal text-sm ml-4">{{ note.content }}</li>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
         </div>
     </div>
