@@ -12,7 +12,7 @@
                 <p class="mb-2 font-sans font-semibold">{{ experience.title }}</p>
                 <div class="ml-4 collapse" id="{{ experience.company }}">
                     {% for note in experience.notes %}
-                    <div class="border-l hover:border-indigo-300 dark:hover:border-indigo-300 dark:border-gray-600 font-sans font-normal text-sm ml-4">{{ note.content }}</li>
+                    <div class="border-l dark:border-gray-600 font-sans font-normal text-sm ml-2 pl-2">{{ note.content }}</li>
                     {% endfor %}
                 </div>
             </div>
