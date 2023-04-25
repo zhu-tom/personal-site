@@ -1,9 +1,15 @@
 - title: Software Engineer Intern
+  company: Databricks
+  img: databricks.png
+  notes:
+    - content: Building Delta Sharing anomaly detection with Scala, Python, Spark, Bazel, Jenkins, Git, Kubernetes, Prometheus
+
+- title: Software Engineer Intern
   company: Coinbase
   img: coinbase.png
   start: May '22
   notes:
-    - content: Working on Prime Trading Engineering with Golang, Ruby, Docker, Rails, Postgres, MongoDB, and DynamoDB
+    - content: Worked on the Prime Trading team where I built a real-time query engine to improve the observability of the Prime Broker, a tool used by large institutional clients such as investment firms. Complete with SSO integration, the platform could provide complex queries, analytics, and dashboards with sub-second latencies. I used Python, Golang, and Kafka to create APIs which helped developers quickly hook into the live data streams.
 
 - title: Software Developer Intern
   company: Shopify
